@@ -14,6 +14,18 @@
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="assets/css/style.css" />
+
+		<!-- Javascript Email-->
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			(function () {
+				// https://dashboard.emailjs.com/admin/account
+				emailjs.init("2_OmSN8_UfAkgiqh4");
+			})();
+		</script>
 		<title>Gyeong-Min</title>
 	</head>
 	<body>
@@ -90,18 +102,12 @@
 							</a>
 						</div>
 						<div class="home__img">
-							<img
-								src="https://images.unsplash.com/photo-1569201529241-f96205e2f2c6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=802&q=80"
-								alt=""
-							/>
+							<img src="assets/img/profile.jpg" alt="" />
 						</div>
 						<div class="home__data">
 							<h1 class="home__title">Hi I'm Tyler</h1>
 							<h3 class="home__subtitle">Web Developer</h3>
 							<p class="home__description">
-								<!-- Vancouver based frontend web developer who is self-motivated,
-                passionate about learning and applying new skills with strong
-                communication skills! -->
 								Welcome to my portfolio!
 								<br />
 								<i
@@ -650,29 +656,40 @@
 							</div>
 						</div>
 					</div>
-					<form action="" class="contact__form grid">
+					<form action="" class="contact__form grid" id="contact-form">
 						<div class="contact__inputs grid">
 							<div class="contact__content">
 								<label for="name" class="contact__label">Name</label>
-								<input type="text" class="contact__input" id="name" />
+								<input
+									type="text"
+									class="contact__input"
+									id="contact-name"
+									name="user_name"
+								/>
 							</div>
 							<div class="contact__content">
 								<label for="email" class="contact__label">Email</label>
-								<input type="email" class="contact__input" id="email" />
+								<input
+									type="email"
+									class="contact__input"
+									id="contact-email"
+									name="user_email"
+								/>
 							</div>
 						</div>
 						<div class="contact__content">
 							<label for="message" class="contact__label">Message</label>
 							<textarea
 								name="message"
-								id="message"
+								id="contact-message"
 								cols="1"
 								rows="7"
 								class="contact__input contact__input__textarea"
+								name="message"
 							></textarea>
 						</div>
 						<div>
-							<a href="#" class="button button--flex">
+							<a class="button button--flex">
 								Send Message
 								<i class="uil uil-message button__icon"></i>
 							</a>
@@ -730,6 +747,6 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
 		<!-- Initialize Firebase -->
-		<script src="/__/firebase/init.js"></script>
+		<!-- <script src="/__/firebase/init.js"></script> -->
 	</body>
 </html>
