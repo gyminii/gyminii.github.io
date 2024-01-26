@@ -152,7 +152,6 @@ const contactForm = document.getElementById("contact-form").querySelector("a");
 // 템플릿id: template_2hn18zq
 const sendEmail = (e) => {
 	e.preventDefault();
-	console.log(e, "yoo");
 	const name = document.getElementById("contact-name").value;
 	const email = document.getElementById("contact-email").value;
 	const message = document.getElementById("contact-message").value;
@@ -162,8 +161,13 @@ const sendEmail = (e) => {
 		message: message,
 	};
 
-	email.send("service_cqwlhzw", "template_2hn18zq", templateParams).then(
+	emailjs.send("service_cqwlhzw", "template_2hn18zq", params).then(
 		function (response) {
+			console.log(e, response);
+
+			document.getElementById("contact-name").value = "";
+			document.getElementById("contact-email").value = "";
+			document.getElementById("contact-message").value = "";
 			console.log("SUCCESS!", response.status, response.text);
 		},
 		function (error) {
