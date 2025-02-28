@@ -57,7 +57,7 @@ tabs.forEach((tab) => {
 });
 /* ========== SERVICES MODAL ========== */
 /* ========== PORTFOLIO SWIPER ========== */
-let swiper = new Swiper(".portfolio__container", {
+const swiper = new Swiper(".portfolio__container", {
 	cssMode: true,
 	loop: true,
 
@@ -69,6 +69,8 @@ let swiper = new Swiper(".portfolio__container", {
 		el: ".swiper-pagination",
 		clickable: true,
 	},
+	mousewheel: true,
+	keyboard: true,
 });
 /* ========== SCROLL SECTION ACTION LINK ========== */
 const sections = document.querySelectorAll("section[id]");
@@ -147,28 +149,47 @@ themeButton.addEventListener("click", () => {
 });
 /* ========== Email.js ========== */
 const contactForm = document.getElementById("contact-form").querySelector("a");
+const contactButton = document.getElementById("contact-button");
+const nameInput = document.getElementById("contact-name");
+const emailInput = document.getElementById("contact-email");
+const messageInput = document.getElementById("contact-message");
+const validateForm = () => {
+	const name = nameInput.value.trim();
+	const email = emailInput.value.trim();
+	const message = messageInput.value.trim();
+	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	// Enable button only if all fields are filled and email is valid
+	if (name !== "" && emailRegex.test(email) && message !== "") {
+		contactButton.classList.remove("contact-disabled");
+	} else {
+		contactButton.classList.add("contact-disabled");
+	}
+};
+nameInput.addEventListener("input", validateForm);
+emailInput.addEventListener("input", validateForm);
+messageInput.addEventListener("input", validateForm);
 // public key: 2_OmSN8_UfAkgiqh4
-// 서비스id: service_cqwlhzw
-// 템플릿id: template_2hn18zq
+// service id: service_cqwlhzw
+// template id: template_2hn18zq
 const sendEmail = (e) => {
 	e.preventDefault();
-	const name = document.getElementById("contact-name").value;
-	const email = document.getElementById("contact-email").value;
-	const message = document.getElementById("contact-message").value;
+	if (contactButton.classList.contains("contact-disabled")) return;
+
 	const params = {
-		name: name,
-		email: email,
-		message: message,
+		name: nameInput.value.trim(),
+		email: emailInput.value.trim(),
+		message: messageInput.value.trim(),
 	};
 
 	emailjs.send("service_cqwlhzw", "template_2hn18zq", params).then(
 		function (response) {
 			console.log(e, response);
 
-			document.getElementById("contact-name").value = "";
-			document.getElementById("contact-email").value = "";
-			document.getElementById("contact-message").value = "";
-			console.log("SUCCESS!", response.status, response.text);
+			nameInput.value = "";
+			emailInput.value = "";
+			messageInput.value = "";
+			alert("Message sent successfully!");
+			validateForm();
 		},
 		function (error) {
 			console.log("FAILED...", error);

@@ -7,10 +7,14 @@
 		<!-- UNICONS -->
 		<link
 			rel="stylesheet"
-			href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+			href="https://unicons.iconscout.com/release/v4.2.0/css/line.css"
 		/>
 		<!-- SWIPER CSS -->
-		<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+		<!-- <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" /> -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="assets/css/style.css" />
@@ -86,11 +90,7 @@
 							>
 								<i class="uil uil-linkedin-alt"></i>
 							</a>
-							<a
-								href="mailto:tylerdlrudals@gmail.com"
-								class="home__social-icon"
-								target="_blank"
-							>
+							<a href="#contact" class="home__social-icon">
 								<i class="uil uil-envelope-question"></i>
 							</a>
 							<a
@@ -155,7 +155,7 @@
 						</p>
 						<div class="about__info">
 							<div>
-								<span class="about__info-title">03+</span>
+								<span class="about__info-title">04+</span>
 								<span class="about__info-name"
 									>Years<br />
 									web development</span
@@ -178,7 +178,7 @@
 						</div>
 						<div class="about__buttons">
 							<a
-								href="assets/pdf/Resume_GyeongMinLee.pdf"
+								href="assets/pdf/Resume.pdf"
 								download
 								class="button button--flex"
 							>
@@ -199,7 +199,7 @@
 							<div class="skills__header">
 								<i class="uil uil-brackets-curly skills__icon"></i>
 								<div>
-									<h1 class="skills__title">Web development</h1>
+									<h1 class="skills__title">Frontend</h1>
 									<span class="skills__subtitle">More than 4 years</span>
 								</div>
 								<i class="uil uil-angle-down skills__arrow"></i>
@@ -207,8 +207,17 @@
 							<div class="skills__list grid">
 								<div class="skills__data">
 									<div class="skills__titles">
-										<h3 class="skills__name">React</h3>
+										<h3 class="skills__name">React.js</h3>
 										<span class="skills__number">95%</span>
+									</div>
+									<div class="skills__bar">
+										<span class="skills__percentage skills__react"></span>
+									</div>
+								</div>
+								<div class="skills__data">
+									<div class="skills__titles">
+										<h3 class="skills__name">Next.js</h3>
+										<span class="skills__number">80%</span>
 									</div>
 									<div class="skills__bar">
 										<span class="skills__percentage skills__react"></span>
@@ -234,20 +243,11 @@
 								</div>
 								<div class="skills__data">
 									<div class="skills__titles">
-										<h3 class="skills__name">Rest API</h3>
+										<h3 class="skills__name">Zustand</h3>
 										<span class="skills__number">95%</span>
 									</div>
 									<div class="skills__bar">
-										<span class="skills__percentage skills__restapi" />
-									</div>
-								</div>
-								<div class="skills__data">
-									<div class="skills__titles">
-										<h3 class="skills__name">Node Js</h3>
-										<span class="skills__number">90%</span>
-									</div>
-									<div class="skills__bar">
-										<span class="skills__percentage skills__node" />
+										<span class="skills__percentage skills__redux" />
 									</div>
 								</div>
 							</div>
@@ -259,7 +259,7 @@
 							<div class="skills__header">
 								<i class="uil uil-server-network skills__icon"></i>
 								<div>
-									<h1 class="skills__title">Database</h1>
+									<h1 class="skills__title">Backend</h1>
 									<span class="skills__subtitle">More than 2 years</span>
 								</div>
 								<i class="uil uil-angle-down skills__arrow"></i>
@@ -267,7 +267,7 @@
 							<div class="skills__list grid">
 								<div class="skills__data">
 									<div class="skills__titles">
-										<h3 class="skills__name">Dynamo DB</h3>
+										<h3 class="skills__name">Node.js</h3>
 										<span class="skills__number">95%</span>
 									</div>
 									<div class="skills__bar">
@@ -276,8 +276,8 @@
 								</div>
 								<div class="skills__data">
 									<div class="skills__titles">
-										<h3 class="skills__name">SQL Server</h3>
-										<span class="skills__number">60%</span>
+										<h3 class="skills__name">JWT & Firebase Auth</h3>
+										<span class="skills__number">80%</span>
 									</div>
 									<div class="skills__bar">
 										<span class="skills__percentage skills__sqlserver" />
@@ -285,7 +285,7 @@
 								</div>
 								<div class="skills__data">
 									<div class="skills__titles">
-										<h3 class="skills__name">Firebase</h3>
+										<h3 class="skills__name">REST API</h3>
 										<span class="skills__number">90%</span>
 									</div>
 									<div class="skills__bar">
@@ -294,11 +294,20 @@
 								</div>
 								<div class="skills__data">
 									<div class="skills__titles">
-										<h3 class="skills__name">MongoDB</h3>
+										<h3 class="skills__name">GraphQL</h3>
 										<span class="skills__number">85%</span>
 									</div>
 									<div class="skills__bar">
 										<span class="skills__percentage skills__mongodb"></span>
+									</div>
+								</div>
+								<div class="skills__data">
+									<div class="skills__titles">
+										<h3 class="skills__name">Microsoft SQL Server & knex.js</h3>
+										<span class="skills__number">75%</span>
+									</div>
+									<div class="skills__bar">
+										<span class="skills__percentage skills__dynamodb" />
 									</div>
 								</div>
 							</div>
@@ -308,9 +317,11 @@
 					<div>
 						<div class="skills__content skills__close">
 							<div class="skills__header">
-								<i class="uil uil-code-branch skills__icon"></i>
+								<i class="uil uil-cloud skills__icon"></i>
 								<div>
-									<h1 class="skills__title">Workflow</h1>
+									<h1 class="skills__title">
+										Infrastructure (CI/CD & Cloud Deployment)
+									</h1>
 									<span class="skills__subtitle">More than 2 years</span>
 								</div>
 								<i class="uil uil-angle-down skills__arrow"></i>
@@ -318,8 +329,8 @@
 							<div class="skills__list grid">
 								<div class="skills__data">
 									<div class="skills__titles">
-										<h3 class="skills__name">Git Version Control</h3>
-										<span class="skills__number">90%</span>
+										<h3 class="skills__name">AWS CodePipeline</h3>
+										<span class="skills__number">80%</span>
 									</div>
 									<div class="skills__bar">
 										<span
@@ -329,7 +340,7 @@
 								</div>
 								<div class="skills__data">
 									<div class="skills__titles">
-										<h3 class="skills__name">Agile Methodology</h3>
+										<h3 class="skills__name">AWS CodeCommit</h3>
 										<span class="skills__number">95%</span>
 									</div>
 									<div class="skills__bar">
@@ -340,17 +351,27 @@
 								</div>
 								<div class="skills__data">
 									<div class="skills__titles">
-										<h3 class="skills__name">Jira</h3>
+										<h3 class="skills__name">GitHub Actions</h3>
 										<span class="skills__number">90%</span>
 									</div>
 									<div class="skills__bar">
 										<span class="skills__percentage skills__jira"></span>
 									</div>
 								</div>
+
 								<div class="skills__data">
 									<div class="skills__titles">
-										<h3 class="skills__name">Trello</h3>
-										<span class="skills__number">80%</span>
+										<h3 class="skills__name">Railway</h3>
+										<span class="skills__number">90%</span>
+									</div>
+									<div class="skills__bar">
+										<span class="skills__percentage skills__trello"></span>
+									</div>
+								</div>
+								<div class="skills__data">
+									<div class="skills__titles">
+										<h3 class="skills__name">AWS Services(EC2, S3, Lambda)</h3>
+										<span class="skills__number">85%</span>
 									</div>
 									<div class="skills__bar">
 										<span class="skills__percentage skills__trello"></span>
@@ -365,16 +386,18 @@
 							<div class="skills__header">
 								<i class="uil uil-swatchbook skills__icon"></i>
 								<div>
-									<h1 class="skills__title">Development Tools</h1>
-									<span class="skills__subtitle">More than 2 years</span>
+									<h1 class="skills__title">
+										Miscellaneous & Productivity Tools
+									</h1>
+									<span class="skills__subtitle">More than 4 years</span>
 								</div>
 								<i class="uil uil-angle-down skills__arrow"></i>
 							</div>
 							<div class="skills__list grid">
 								<div class="skills__data">
 									<div class="skills__titles">
-										<h3 class="skills__name">AWS</h3>
-										<span class="skills__number">65%</span>
+										<h3 class="skills__name">Notion</h3>
+										<span class="skills__number">75%</span>
 									</div>
 									<div class="skills__bar">
 										<span class="skills__percentage skills__aws"></span>
@@ -382,8 +405,8 @@
 								</div>
 								<div class="skills__data">
 									<div class="skills__titles">
-										<h3 class="skills__name">Microsoft Azure</h3>
-										<span class="skills__number">69%</span>
+										<h3 class="skills__name">Jira & Asana</h3>
+										<span class="skills__number">90%</span>
 									</div>
 									<div class="skills__bar">
 										<span
@@ -402,7 +425,7 @@
 								</div>
 								<div class="skills__data">
 									<div class="skills__titles">
-										<h3 class="skills__name">Figma</h3>
+										<h3 class="skills__name">Figma & Moqups</h3>
 										<span class="skills__number">90%</span>
 									</div>
 									<div class="skills__bar">
@@ -506,116 +529,95 @@
 			<section class="portfolio section" id="portfolio">
 				<h2 class="section__title">Portfolio</h2>
 				<span class="section__subtitle">My work</span>
-				<div class="portfolio__container container swiper-container">
+				<!-- ========== Tyra ========== -->
+				<div class="swiper portfolio__container container swiper-container">
 					<div class="swiper-wrapper">
-						<!-- ========== PORTFOLIO 1 ========== -->
-						<div class="portfolio__content grid swiper-slide">
-							<img src="assets/img/ks1.png" alt="" class="portfolio__img" />
-							<div class="portfolio__data">
-								<h3 class="portfolio__title">
-									Kreamin Studio - Online Flea Market
-								</h3>
-								<p class="portfolio__description">
-									BCIT Academic Project<br />
-								</p>
-								<p class="portfolio__description">
-									Tech Stacks: <br /><span style="font-style: italic"
-										>React.js, Redux, Node.js Express, Sequelize & MySQL,
-										Socket.IO, CSS, Chakra UI
-									</span>
-								</p>
-								<a
-									href="https://comp4537-front-end.herokuapp.com/"
-									target="_blank"
-									class="button button--flex button--small portfolio__button"
-									>Link
-									<i class="uil uil-arrow-right button__icon"></i>
-								</a>
-							</div>
-						</div>
-						<!-- ========== PORTFOLIO 2 ========== -->
-						<div class="portfolio__content grid swiper-slide">
-							<img src="assets/img/ks2.png" alt="" class="portfolio__img" />
-							<div class="portfolio__data">
-								<p class="portfolio__description">
-									- Developed with one other partner
-								</p>
-								<p class="portfolio__description">
-									- Efficient global state management using Redux Thunk.
-								</p>
-								<p class="portfolio__description">
-									- Utilized Chakra UI to enhance pure CSS.
-								</p>
-								<p class="portfolio__description">
-									- Designed the UI/UX, maintained version control
-								</p>
-							</div>
-						</div>
-					</div>
-					<!-- Add Arrows -->
-					<div class="swiper-button-next">
-						<i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-					</div>
-					<div class="swiper-button-prev">
-						<i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-					</div>
-					<!-- Add Pagination -->
-					<div class="swiper-pagination"></div>
-				</div>
-				<br /><br /><br /><br />
-				<div class="portfolio__container container swiper-container">
-					<div class="swiper-wrapper">
-						<!-- ========== PORTFOLIO 1 ========== -->
+						<!-- ========== Slider 1 ========== -->
 						<div class="portfolio__content grid swiper-slide">
 							<img
-								src="assets/img/resumaker1.png"
-								alt=""
+								src="assets/img/tyra-mobilefirst.png"
+								alt="Tyra - Kanban Board UI"
 								class="portfolio__img"
 							/>
 							<div class="portfolio__data">
-								<h3 class="portfolio__title">
-									Resumaker - Online Resume Editor
-								</h3>
+								<h3 class="portfolio__title">Tyra - Kanban Board</h3>
 								<p class="portfolio__description">Personal Project</p>
-
+								<p class="portfolio__description">
+									A feature-rich and interactive Kanban board designed for task
+									management and workflow organization.
+								</p>
+								<p class="portfolio__description">
+									Key Features: <br />
+									- Real-time task updates with seamless state management <br />
+									- Drag-and-drop functionality for smooth task reordering
+									<br />
+									- Fully responsive UI for desktop and mobile
+								</p>
 								<p class="portfolio__description">
 									Tech Stacks: <br /><span style="font-style: italic"
-										>React.js, Typescript, Redux Saga, AWS, Node.js</span
+										>React, Redux, GraphQL, MUI, MongoDB</span
 									>
 								</p>
 								<a
-									href="https://www.resumaker.io/"
+									href="https://tyra.up.railway.app/"
 									target="_blank"
 									class="button button--flex button--small portfolio__button"
-									>Link
-									<i class="uil uil-arrow-right button__icon"></i>
+								>
+									Link <i class="uil uil-arrow-right button__icon"></i>
 								</a>
 							</div>
 						</div>
-						<!-- ========== PORTFOLIO 2 ========== -->
+
+						<!-- ========== Slider 2 ========== -->
 						<div class="portfolio__content grid swiper-slide">
 							<img
-								src="assets/img/resumaker2.png"
-								alt=""
+								src="assets/img/tyra-lightmode.png"
+								alt="Customizable UI with Dark Mode"
 								class="portfolio__img"
 							/>
 							<div class="portfolio__data">
-								<p class="portfolio__description">- Designed UI/UX</p>
 								<p class="portfolio__description">
-									- Integrated Typescript to maximize memory, and code
-									efficiency.
+									- Supports both dark mode and light mode for better
+									accessibility and user experience
 								</p>
 								<p class="portfolio__description">
-									- Integrated Redux Saga for easier asynchronous logic tests on
-									actions.
+									- Modern UI with a clean and minimal design
 								</p>
 								<p class="portfolio__description">
-									- Focused on concepts of Typescript in React components, and
-									nested CSS Flexbox.
+									- Adaptive layout for mobile and desktop devices
+								</p>
+								<p class="portfolio__description">
+									- Easy-to-use interface for enhanced usability
+								</p>
+							</div>
+						</div>
+
+						<!-- ========== Slider 3 ========== -->
+						<div class="portfolio__content grid swiper-slide">
+							<img
+								src="assets/img/tyra-edit.png"
+								alt="Optimistic UI Updates & Mobile Support"
+								class="portfolio__img"
+							/>
+							<div class="portfolio__data">
+								<p class="portfolio__description">
+									- Optimistic updates provide instant feedback when performing
+									actions, improving user experience
+								</p>
+								<p class="portfolio__description">
+									- Designed with a mobile-first approach ensuring seamless
+									experience on small screens
+								</p>
+								<p class="portfolio__description">
+									- Smooth animations and transitions for a polished feel
+								</p>
+								<p class="portfolio__description">
+									- Fully interactive task editor with real-time updates
 								</p>
 							</div>
 						</div>
 					</div>
+
 					<!-- Add Arrows -->
 					<div class="swiper-button-next">
 						<i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
@@ -623,9 +625,12 @@
 					<div class="swiper-button-prev">
 						<i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
 					</div>
+
 					<!-- Add Pagination -->
 					<div class="swiper-pagination"></div>
 				</div>
+
+				<!-- <br /><br /><br /><br /> -->
 			</section>
 			<!-- ========== CONTACT ME ========== -->
 			<section class="contact section" id="contact">
@@ -689,7 +694,10 @@
 							></textarea>
 						</div>
 						<div>
-							<a class="button button--flex">
+							<a
+								id="contact-button"
+								class="button button--flex contact-disabled"
+							>
 								Send Message
 								<i class="uil uil-message button__icon"></i>
 							</a>
@@ -704,7 +712,7 @@
 				<div class="footer__container container grid">
 					<div>
 						<h1 class="footer__title">Tyler</h1>
-						<span class="footer__subtitle">FrontEnd developer</span>
+						<span class="footer__subtitle">Full Stack Web Developer</span>
 					</div>
 					<ul class="footer__links">
 						<li>
@@ -737,7 +745,9 @@
 			<i class="uil uil-arrow-up scrollup__icon"></i>
 		</a>
 		<!-- SWIPER JS -->
-		<script src="assets/js/swiper-bundle.min.js"></script>
+		<!-- <script src="assets/js/swiper-bundle.min.js"></script> -->
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<!-- MAIN JS -->
 		<script src="assets/js/main.js"></script>
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
